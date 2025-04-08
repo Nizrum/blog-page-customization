@@ -45,7 +45,7 @@ export const ArticleParamsForm = ({
 		defaultArticleState.contentWidth
 	);
 
-	const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setArticleState({
 			fontFamilyOption: fontFamily,
@@ -56,7 +56,7 @@ export const ArticleParamsForm = ({
 		});
 	};
 
-	const onReset = () => {
+	const handleReset = () => {
 		setFontFamily(defaultArticleState.fontFamilyOption);
 		setFontSize(defaultArticleState.fontSizeOption);
 		setFontColor(defaultArticleState.fontColor);
@@ -84,8 +84,8 @@ export const ArticleParamsForm = ({
 				)}>
 				<form
 					className={styles.form}
-					onSubmit={onSubmit}
-					onReset={onReset}>
+					onSubmit={handleSubmit}
+					onReset={handleReset}>
 					<Text
 						size={31}
 						weight={800}
